@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title> EECS 448 Lab 5 Part 1 </title>
+  </head>
+
+  <body>
+    <form>
+      <label> "Input Password:" </label>
+      <input type="text" id="Pass1" name="Pass1"> <br><br>
+      <label> "Verify Password:" <label>
+      <input type="text" id="Pass2" name="Pass2"> <br><br>
+      <button type="button" onclick="Validate()"> "Validate" </button> <br><br>
+      <label id="Error" name="Error"> <br><br>
+    </form>
+  </body>
+  <script>
+    function Validate()
+    {
+      let Pass1 = document.getElementByID("Pass1")
+      let Pass2 = document.getElementByID("Pass2")
+      let Error = document.getElementByID("Error")
+
+      if (Pass1.value == Pass2.value)
+      {
+        if(Pass1.value >= 8)
+        {
+          Error.textcontent = "Password Validated!"
+        }
+        else
+        {
+          Error.textcontent = "Password must be 8 or more characters long."
+        }
+      }
+      else
+      {
+        Error.textcontent = "Passwords do not match."
+      }
+    }
+  </script>
+</html>
