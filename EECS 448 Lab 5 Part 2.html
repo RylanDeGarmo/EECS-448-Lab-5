@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <title> EECS 448 Lab 5 Part 2 </title>
+  </head>
+
+  <body>
+    <img src="https://i.insider.com/57a4db38dd089551028b465b?width=1136&format=jpeg" height=300 width=500 id=Image>
+    <br>
+    <button type="button" onClick=Next()> Next </button>
+    <button type="button" onClick=Last()> Last </button>
+
+    <script>
+      let pic = 1;
+
+      function Next()
+      {
+        var Image = document.getElementById("Image")
+
+        if (pic == 5)
+        {
+          pic = 0;
+        }
+
+        pic = pic+1;
+
+        if (pic == 1)
+        {
+          Image.src="https://i.insider.com/57a4db38dd089551028b465b?width=1136&format=jpeg"
+        }
+        else if (pic ==2)
+        {
+          Image.src="https://www.thesprucepets.com/thmb/fgK5C8pFGh5NH4Mbh9sm14vUsgE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/siamese-fighting-fish-bettas-1378308-hero-f459084da1414308accde7e21001906c.jpg"
+        }
+        else if (pic == 3)
+        {
+          Image.src="https://images.twinkl.co.uk/tr/raw/upload/u/ux/usawiki-fish-clownfish_ver_1.jpg"
+        }
+        else if (pic == 4)
+        {
+          Image.src="https://media.fisheries.noaa.gov/styles/inline_field_thumbnail/s3/2022-10/1999x1295-striped-marlin-PIFSC.png?h=84b100ad&itok=OyP3mppi"
+        }
+        else if (pic == 5)
+        {
+          Image.src="https://a-z-animals.com/media/2021/11/tree-frog.jpg"
+        }
+      }
+
+      function Last()
+      {
+        var Image = document.getElementById("Image")
+
+        if (pic == 1)
+        {
+          pic = 6;
+        }
+
+        pic = pic-1;
+
+        if (pic == 1)
+        {
+          Image.src="https://i.insider.com/57a4db38dd089551028b465b?width=1136&format=jpeg"
+        }
+        else if (pic ==2)
+        {
+          Image.src="https://www.thesprucepets.com/thmb/fgK5C8pFGh5NH4Mbh9sm14vUsgE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/siamese-fighting-fish-bettas-1378308-hero-f459084da1414308accde7e21001906c.jpg"
+        }
+        else if (pic == 3)
+        {
+          Image.src="https://images.twinkl.co.uk/tr/raw/upload/u/ux/usawiki-fish-clownfish_ver_1.jpg"
+        }
+        else if (pic == 4)
+        {
+          Image.src="https://media.fisheries.noaa.gov/styles/inline_field_thumbnail/s3/2022-10/1999x1295-striped-marlin-PIFSC.png?h=84b100ad&itok=OyP3mppi"
+        }
+        else if (pic == 5)
+        {
+          Image.src="https://a-z-animals.com/media/2021/11/tree-frog.jpg"
+        }
+      }
+    </script>
+  </body>
+</html>
