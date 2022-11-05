@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <style>
+            body
+            {
+                border-style: solid;
+            }
+        </style>
+
+        <title> EECS 448 Lab 5 Part 4 </title>
+    </head>
+
+    <body>
+        <p> Choose what you want the border and background to be! (Please use 0-255 for color values) </p> <br><br>
+        <form>
+            <label id="test"> Border options. </label> <br>
+            <label> Red value: </label>
+            <input type="text" id="RedBorder" name="RedBorder" value=""> <br>
+            <label> Green value: </label>
+            <input type="text" id="GreenBorder" name="GreenBorder" value=""> <br>
+            <label> Blue value: </label>
+            <input type="text" id="BlueBorder" name="BlueBorder" value=""> <br>
+            <label> Width: </label>
+            <input type="text" id="WidthBorder" name="WidthBorder" value=""> <br><br>
+
+            <label> Background options. </label> <br>
+            <label> Red value: </label>
+            <input type="text" id="RedBackground" name="RedBackground" value=""> <br>
+            <label> Green value: </label>
+            <input type="text" id="GreenBackground" name="GreenBackground" value=""> <br>
+            <label> Blue value: </label>
+            <input type="text" id="BlueBackground" name="BlueBackground" value=""> <br><br>
+
+            <button type="button" onclick="TextShift()"> Update Options </button>
+        </form>
+
+        <script>
+            function TextShift()
+            {
+                var RedBorder = document.getElementById("RedBorder").value;
+                var GreenBorder = document.getElementById("GreenBorder").value;
+                var BlueBorder = document.getElementById("BlueBorder").value;
+                var WidthBorder = document.getElementById("WidthBorder").value;
+
+                var RedBackground = document.getElementById("RedBackground").value;
+                var GreenBackground = document.getElementById("GreenBackground").value;
+                var BlueBackground = document.getElementById("BlueBackground").value;
+
+                var BordColor = "rgb(" + RedBorder + ", " + GreenBorder + ", " + BlueBorder +")";
+                var BackColor = "rgb(" + RedBackground +", " + GreenBackground + ", " + BlueBackground + ")";
+
+                document.body.style.borderColor = BordColor;
+
+                document.body.style.borderWidth = WidthBorder;
+
+                document.body.style.backgroundColor = BackColor;
+            }
+        </script>
+    </body>
+</html>
